@@ -1,0 +1,137 @@
+.modal{
+    position: absolute;
+    z-index: 1;
+    padding:20px;
+    left: 10%;
+    top: 5%;
+    width: 60%;
+    margin: 100px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+}
+
+#task-container-header{
+    padding:10px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.task-header{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+}
+
+.completion{
+	background-color: rgb(146, 246, 146);
+}
+
+.taskContainer{
+    box-shadow: 3px 3px lightgrey;
+    border-radius: 20px; 
+    margin: 10px 0px; 
+    padding: 20px;
+}
+
+.btn{
+    padding: 10px 20px;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+.deletebtn{
+    padding: 10px 20px;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: red;
+    float: right;
+}
+
+.completebtn{
+    padding: 10px 20px;
+    color: white;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: green;
+    float: right;
+}
+
+.taskDetailsBody{
+    padding: 20px;
+    background: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    white-space: pre-line;
+}
+
+.left-container-class{
+    width: 30%;
+    border-right: 3px solid darkgray;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    height: 580px;
+    vertical-align: top;
+}
+
+.right-container-class{
+    width: 60%;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.parent-element-class{
+    padding:5px;
+    margin: 10px;
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+}
+
+.comment-btn{
+	border: none;
+	background: white;
+	float: right;
+}
+
+.comment-creation-class{
+	margin: 20px;
+	border-bottom: 1px solid darkgrey;
+	padding-bottom: 10px;
+}
+
+.comment-holder-class{
+	margin: 10px; 
+	padding:10px;
+	border-bottom: 2px solid darkgrey;
+}
+
+.generic-btn{
+	padding: 10px 30px;
+	margin: 0px 20px;
+	border: 1px solid darkgrey;
+	border-radius: 10px;
+	width: 147.2px;
+}
+
+.error-container-class{
+	margin: 5px;
+	padding: 2px;
+}
+
+.alignment{
+	text-align: center;
+	border-radius: 10px;
+}
