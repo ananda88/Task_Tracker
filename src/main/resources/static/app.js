@@ -138,7 +138,7 @@ function createTaskSummaryList(task) {
 
 	let taskSummary = document.createElement('a');
 	taskSummary.innerHTML = task.summary.toUpperCase();
-	taskSummary.style = 'font-size:14px; display:inline-block';
+	taskSummary.style = 'font-size:14px; display:inline-block; text-decoration:none; font-weight: bold';
 	taskSummary.setAttribute('href', '#');
 	taskSummary.addEventListener('click', (event) => {
 		let taskId = event.srcElement.nextSibling.textContent;
@@ -300,27 +300,35 @@ function createElementFromJson(task) {
 	let taskDetailsheader = document.createElement('div');
 
 	let taskDetailsHeaderText = document.createElement('p');
-	taskDetailsHeaderText.style = 'font-size: 16px;display: inline-block; margin-right: 10px;';
-	taskDetailsHeaderText.textContent = 'TASK DESCRIPTION ';
+	taskDetailsHeaderText.style = 'font-size: 14px;display: inline-block; margin-right: 10px;  font-weight: bold';
+	taskDetailsHeaderText.textContent = 'DESCRIPTION ';
 
 
-	let taskDetailsEdit = document.createElement('button');
-	taskDetailsEdit.innerHTML = 'Edit';
-	taskDetailsEdit.classList.add('generic-btn');
-	taskDetailsEdit.addEventListener('click', () => {
-		document.getElementById('task-update-description').value = task.description;
-		document.getElementById('task-update-modal').classList.toggle('hide');
-	});
+	
 
 	taskDetailsheader.appendChild(taskDetailsHeaderText);
-	taskDetailsheader.appendChild(taskDetailsEdit);
+	
+	
+	let taskDetailsBody = document.createElement('div');
 
 	let taskDetails = document.createElement('div');
 	taskDetails.innerHTML = '<p>' + task.description + '</p>';
 	taskDetails.classList.add('taskDetailsBody');
+	
+	
+	let taskDetailsEdit = document.createElement('button');
+	taskDetailsEdit.innerHTML = '<i class="fa fa-edit"></i>';
+	taskDetailsEdit.classList.add('edit-btn');
+	taskDetailsEdit.addEventListener('click', () => {
+		document.getElementById('task-update-description').value = task.description;
+		document.getElementById('task-update-modal').classList.toggle('hide');
+	});
+	
+	taskDetailsBody.appendChild(taskDetails);
+	taskDetailsBody.appendChild(taskDetailsEdit);
 
 	taskBodyLeft.appendChild(taskDetailsheader);
-	taskBodyLeft.appendChild(taskDetails);
+	taskBodyLeft.appendChild(taskDetailsBody);
 
 	let taskBodyRight = document.createElement('div');
 	taskBodyRight.style = 'width:30%; display:inline-block';
@@ -355,6 +363,7 @@ function createElementFromJson(task) {
 
 	// add comments if present
 	if (task.comments.length > 0) {
+		document.getElementById('comment-holder').innerHTML = '';
 		for (let comment of task.comments) {
 			let commentHolder = document.createElement('div');
 			commentHolder.classList.add('comment-holder-class');

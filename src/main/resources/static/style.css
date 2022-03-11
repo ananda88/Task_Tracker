@@ -17,7 +17,8 @@
 #task-container-header{
     padding:10px;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    border-bottom: 1px solid darkgrey;
     position: sticky;
     position: -webkit-sticky;
 }
@@ -46,14 +47,14 @@
     color: white;
     margin-right: 20px;
     border-radius: 10px;
-    background-color: blue;
+    background-color: rgb(100,149,237);
 }
 
 .deletebtn{
     padding: 10px 20px;
     color: white;
     margin-right: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: red;
     float: right;
 }
@@ -68,12 +69,23 @@
 }
 
 .taskDetailsBody{
-    padding: 20px;
+    padding: 10px;
+    width:80%;
     background: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    border: 1px solid black;
     border-radius: 10px;
     white-space: pre-line;
+    display: inline-block;
+}
+
+.edit-btn{
+	width: 10%;
+	height: 100.67px;
+	border: none;
+	border-radius: 5px;
+	display: inline-block;
+	background:rgb(240, 240, 240);
+	text-align: center;
 }
 
 .left-container-class{
